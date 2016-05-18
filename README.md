@@ -15,7 +15,7 @@ bfx.increment_counter :beans
 
 ## Configuration
 
-To use BetterFx with the last amount of code, just set the environment variable
+To use BetterFx with the least amount of code, just set the environment variable
 `SIGNALFX_API_TOKEN` equal to your token.
 
 If you want to configure it imperatively then
