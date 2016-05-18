@@ -18,8 +18,8 @@ module BetterFx
       timestamp ||= 1000 * Time.now.to_i
       dimensions << [{ env: configuration.current_environment }] if dimensions.empty?
       signalfx_client.send counters: [metric: counter_name,
-                                value: value,
-                                timestamp: timestamp.to_s, dimensions: dimensions]
+                                      value: value,
+                                      timestamp: timestamp.to_s, dimensions: dimensions]
     end
   end
 end

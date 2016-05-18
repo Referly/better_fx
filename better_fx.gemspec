@@ -7,10 +7,10 @@ Gem::Specification.new do |s|
   s.description = "A convenient gem for developers to interact with SignalFx with a trivial amount of effort"
   s.authors     = ["Courtland Caldwell"]
   s.email       = "engineering@mattermark.com"
-  s.files         = `git ls-files`.split("\n") - %w[Gemfile Gemfile.lock]
+  s.files         = `git ls-files`.split("\n") - %w(Gemfile Gemfile.lock)
   s.test_files    = `git ls-files -- {spec,features}/*`.split("\n")
   s.homepage =
-      "https://github.com/Referly/better_fx"
+    "https://github.com/Referly/better_fx"
   s.add_runtime_dependency "signalfx", "~> 0.1"                         # Apache2 - @link https://github.com/signalfx/signalfx-ruby
   s.add_development_dependency "rspec", "~> 3.2"                        # MIT - @link https://github.com/rspec/rspec/blob/master/License.txt
   s.add_development_dependency "byebug", "~> 3.5"                       # BSD (content is BSD) https://github.com/deivid-rodriguez/byebug/blob/master/LICENSE
