@@ -1,3 +1,6 @@
+require "signalfx"
+# Monkey patch the SignalFxClient to alias the #send method to as #bf_xmit
+SignalFxClient.send :alias_method, :bf_xmit, :send
 require_relative "better_fx/configuration"
 require_relative "better_fx/client"
 module BetterFx

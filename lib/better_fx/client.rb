@@ -1,12 +1,9 @@
 require "signalfx"
 module BetterFx
   class Client
-    attr_accessor :signalfx_client
-
     def initialize
       # if BetterFx has not been configured then run the default configuration
       BetterFx.configure unless BetterFx.configured?
-      @signalfx_client = SignalFx.new configuration.signalfx_api_token
     end
 
     # Increment a SignalFx counter (if the current environment is a supports using SignalFx)
@@ -20,12 +17,19 @@ module BetterFx
       return unless configuration.supported_environments.include? configuration.current_environment
       timestamp ||= 1000 * Time.now.to_i
       dimensions << { env: configuration.current_environment } if dimensions.empty?
-      signalfx_client.send counters: [metric: counter_name.to_s,
-                                      value: value,
-                                      timestamp: timestamp.to_s, dimensions: dimensions]
+      signalfx_client.bf_xmit(counters: [
+                                metric:     counter_name.to_s,
+                                value:      value,
+                                timestamp:  timestamp.to_s,
+                                dimensions: dimensions,
+                              ])
     end
 
     private
+
+    def signalfx_client
+      SignalFx.new configuration.signalfx_api_token
+    end
 
     def configuration
       BetterFx.configuration
