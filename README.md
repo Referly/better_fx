@@ -28,10 +28,10 @@ BetterFx.configure do |c|
     # The list of environments for which you want to allow transmission of data to 
     # SignalFx (if the current environment is not in this list then transmissions are
     # skipped).
-    # Defaults to [:production]
+    # Defaults to `[:production, :prod, "production", "prod"]`
     c.supported_environments = [:local, :prod]
     # The current environment
-    # Defaults to :production
+    # Defaults to `ENV["APP_ENV"] || :production`
     c.current_environment = :local
 end
 ```

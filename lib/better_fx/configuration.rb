@@ -7,8 +7,8 @@ module BetterFx
 
     def initialize
       @signalfx_api_token       = ENV["SIGNALFX_API_TOKEN"]
-      @supported_environments   = [:production]
-      @current_environment      = :production
+      @supported_environments   = [:production, :prod, "production", "prod"]
+      @current_environment      = ENV["APP_ENV"] || :production
     end
   end
 end
