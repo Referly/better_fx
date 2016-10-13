@@ -1,8 +1,12 @@
+# -*- encoding: utf-8 -*-
+$LOAD_PATH.push File.expand_path("../lib", __FILE__)
+require "better_fx/version"
+
 Gem::Specification.new do |s|
   s.name        = "better_fx"
-  s.version     = "0.1.1"
+  s.version     = BetterFx::VERSION
+  s.date        = BetterFx::VERSION_DATE
   s.license     = "MIT"
-  s.date        = "2016-05-17"
   s.summary     = "A more idiomatic interface to SignalFx."
   s.description = "A convenient gem for developers to interact with SignalFx with a trivial amount of effort"
   s.authors     = ["Courtland Caldwell"]
