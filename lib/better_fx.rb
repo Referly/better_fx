@@ -3,6 +3,7 @@ require "signalfx"
 SignalFxClient.send :alias_method, :bf_xmit, :send
 require_relative "better_fx/configuration"
 require_relative "better_fx/client"
+require_relative "better_fx/measurement"
 module BetterFx
   class << self
     # Allows the user to set configuration options
