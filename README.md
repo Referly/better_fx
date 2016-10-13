@@ -13,6 +13,17 @@ bfx = BetterFx::Client.new
 bfx.increment_counter :beans
 ```
 
+Or you might want to report the value of a measurement you've taken
+
+```ruby
+require "better_fx"
+bfx = BetterFx::Client.new
+# This will send the value 11 to the SignalFx gauge metric named
+#  "soccer_ball_air_pressure" with the current unix timestamp and vanilla
+#  metadata dimensions
+bfx.gauge :soccer_ball_air_pressure, value: 11
+```
+
 ## Configuration
 
 To use BetterFx with the least amount of code, just set the environment variable
