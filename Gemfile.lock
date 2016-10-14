@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    better_fx (0.3.0)
+    better_fx (1.0.0)
       activesupport (~> 4)
       signalfx (~> 0.1)
 
