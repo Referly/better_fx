@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {spec,features}/*`.split("\n")
   s.homepage =
     "https://github.com/Referly/better_fx"
-  s.add_runtime_dependency "signalfx", "~> 0.1"                         # Apache2 - @link https://github.com/signalfx/signalfx-ruby
+  s.add_runtime_dependency "signalfx", "~> 1.0", ">=1.0.2"              # Apache2 - @link https://github.com/signalfx/signalfx-ruby
   s.add_runtime_dependency "activesupport", "~> 4"                      # MIT - @link https://github.com/rails/rails/blob/master/activesupport/MIT-LICENSE
   s.add_development_dependency "rspec", "~> 3.2"                        # MIT - @link https://github.com/rspec/rspec/blob/master/License.txt
   s.add_development_dependency "byebug", "~> 3.5"                       # BSD (content is BSD) https://github.com/deivid-rodriguez/byebug/blob/master/LICENSE

@@ -1,6 +1,9 @@
 # BetterFx
 Making it _easier_ for you to quickly interact with SignalFx in an idiomatic fashion.
 
+As of v 1.x of the signalfx gem Ruby 2.2 became the minimum supported Ruby version. As such
+ you'll need to be using a compatible Ruby.
+
 ## Usage
 
 Usually you just want to indicate that something occurred
